@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow-y: scroll; /* Enable vertical scroll */
+  }
+  
+  /* Add custom scroll */
+  body::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;/* Width of the custom scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #0D1E31; /* Background of the scrollbar track */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white; /* Color of the scrollbar thumb */
+    border-radius: 8px; /* Rounded corners */
+    border: 3px solid #0D1E31;
+    height: 10px; /* Padding around the thumb */
+  }

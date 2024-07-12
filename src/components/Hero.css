@@ -1,0 +1,184 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/images/Hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-txt {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.hero-head {
+  font-size: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+.hello {
+  font-weight: 350;
+}
+
+.name {
+  color: rgb(175, 227, 33);
+  font-weight: 600;
+}
+
+.hero-inner {
+  padding-left: 220px;
+  padding-right: 220px;
+  font-family: "Raleway", sans-serif;
+  z-index: 2;
+  position: relative;
+}
+
+.button-like {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight:400;
+  color: white;
+  background-color: none;
+  border: 1.5px solid white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-like:hover{
+  text-decoration: none;
+  color: white;
+  border-color: cyan;
+}
+
+.button-like span{
+  display: inline-block;
+  font-size: 25px;
+  margin-left: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.button-like:hover span{
+  transform: rotateZ(90deg);
+}
+
+
+
+.shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 70vh;
+  animation: animateBg 50s linear infinite;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@keyframes animateBg {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.shooting-stars span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 6px;
+  background: rgb(175, 227, 33);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: animate 6s linear infinite;
+}
+
+.shooting-stars span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, rgb(239, 238, 235), transparent);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+.shooting-stars span:nth-child(1) {
+  top: 0;
+  right: 0;
+  left: initial;
+  animation-delay: 15s;
+}
+
+.shooting-stars span:nth-child(2) {
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 10s;
+}
+
+.shooting-stars span:nth-child(3) {
+  top: 80px;
+  right: 0px;
+  left: initial;
+  animation-delay: 8s;
+}
+
+.shooting-stars span:nth-child(4) {
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 2s;
+}
+
+.shooting-stars span:nth-child(5) {
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 3s;
+}
+
+
+@media (max-width: 1127px) {
+  .hero-inner{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .hero-head{
+    font-size: 40px;
+  }
+  .hero-txt{
+    font-size: 20px;
+  }
+}
+

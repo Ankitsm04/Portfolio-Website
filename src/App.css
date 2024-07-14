@@ -2,22 +2,41 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    overflow-y: scroll; /* Enable vertical scroll */
+    overflow-y: scroll; 
   }
   
-  /* Add custom scroll */
   body::-webkit-scrollbar {
     width: 10px;
-    height: 30px;/* Width of the custom scrollbar */
+    height: 30px;
   }
   
   body::-webkit-scrollbar-track {
-    background: #0D1E31; /* Background of the scrollbar track */
+    background: #0D1E31; 
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: white; /* Color of the scrollbar thumb */
-    border-radius: 8px; /* Rounded corners */
+    background-color: white; 
+    border-radius: 8px; 
     border: 3px solid #0D1E31;
-    height: 10px; /* Padding around the thumb */
+    height: 10px;
+  }
+
+  .head {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    animation: slideInFromLeft 2s ease-out;
+  }
+  
+  .head p {
+    font-size: 30pt;
+    font-weight: bold;
+  }
+
+.line {
+    background-color: white;
+    height: 5px;
   }

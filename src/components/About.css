@@ -1,7 +1,162 @@
-.about{
-    height: 100vh;
-    background-color: black;
-    color: white;
-    font-family: 'Raleway' , sans-serif;
+.about {
+  height: auto;
+  background-image: url('../assets/images/sections/about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding-bottom: 60px;
+  overflow-x: hidden; 
 }
 
+.about .line {
+  width: 20rem;
+}
+
+.about-body {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hexagon {
+  width: calc(120px * 0.645);
+  height: 120px;
+  background-image: linear-gradient(90deg, #0f630b, #13ce9a);
+  border-radius: calc(120px / 10);
+  transition: transform 400ms ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: inherit;
+  height: inherit;
+  background-image: inherit;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.hexagon::before {
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  transform: rotate(-60deg);
+}
+
+.hexagon img {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-card .head {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.about-card .body {
+  font-size: 15px;
+  padding: 0 10px;
+  margin-top: 0;
+  text-align: center;
+  width: 300px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.more-about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 0 20px; 
+}
+
+.more-about .head {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.more-about .text {
+  width: 100%;
+  max-width: 500px;
+  font-size: 18px;
+  margin: 0 20px;
+}
+
+.skill-board {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10px 0;
+  position: relative;
+  border-radius: 5px;
+}
+
+.skill-name {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1;
+  color: white;
+}
+
+.skill-percent {
+  background-color: #17720f;
+  height: 100%;
+  line-height: 20px;
+  color: white;
+  transition: width 0.5s ease;
+  padding-left: 10px;
+}
+
+@media (max-width: 1100px) {
+  .more-about {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .skill-board{
+    width: 80%;
+  }
+
+  .skill-percent{
+    padding-left: 80px;
+  }
+}

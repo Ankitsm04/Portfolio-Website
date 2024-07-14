@@ -1,40 +1,38 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 
-const scrollToSection = (id, event, setActiveSection) => {
-  event.preventDefault();
-  setActiveSection(id);
-  const element = document.getElementById(id);
-  if (element) {
-    const elementPosition = element.offsetTop;
-    window.scrollTo({
-      top: elementPosition - 70,
-      behavior: 'smooth',
-    });
-  }
-};
-
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState('home');
   const navbarRef = useRef(null);
 
   const toggleNavbar = () => {
     setIsNavVisible(!isNavVisible);
   };
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + 75;
+  const scrollToSection = (id, event) => {
+    event.preventDefault();
+    setActiveSection(id);
+    const element = document.getElementById(id);
+    if (element) {
+      const offsetTop = element.offsetTop - 70;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
 
-    // Define your sections here
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + 75; 
+
     const sections = [
-      { id: 'hero', offset: 0 },
+      { id: 'home', offset: 0 },
       { id: 'about', offset: 0 },
       { id: 'projects', offset: 0 },
       { id: 'contact', offset: 0 },
     ];
 
-    // Find which section is active based on scroll position
     for (const section of sections) {
       const element = document.getElementById(section.id);
       if (element) {
@@ -53,7 +51,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, []); 
 
   return (
     <div ref={navbarRef} className='sticky-top'>
@@ -66,7 +64,7 @@ const Navbar = () => {
             <a
               href="#home"
               className={activeSection === 'home' ? 'active' : ''}
-              onClick={(e) => scrollToSection('home', e, setActiveSection)}
+              onClick={(e) => scrollToSection('home', e)}
             >
               HOME
             </a>
@@ -75,7 +73,7 @@ const Navbar = () => {
             <a
               href="#about"
               className={activeSection === 'about' ? 'active' : ''}
-              onClick={(e) => scrollToSection('about', e, setActiveSection)}
+              onClick={(e) => scrollToSection('about', e)}
             >
               ABOUT
             </a>
@@ -84,7 +82,7 @@ const Navbar = () => {
             <a
               href="#projects"
               className={activeSection === 'projects' ? 'active' : ''}
-              onClick={(e) => scrollToSection('projects', e, setActiveSection)}
+              onClick={(e) => scrollToSection('projects', e)}
             >
               PROJECTS
             </a>
@@ -93,7 +91,7 @@ const Navbar = () => {
             <a
               href="#contact"
               className={activeSection === 'contact' ? 'active' : ''}
-              onClick={(e) => scrollToSection('contact', e, setActiveSection)}
+              onClick={(e) => scrollToSection('contact', e)}
             >
               CONTACT
             </a>

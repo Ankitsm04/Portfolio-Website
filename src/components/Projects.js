@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'HTML/CSS/JS',
       category: 'Web Dev',
       image: PORTFOLIO,
-      link: 'https://ankit-mathapati.azurewebsites.net/',
+      link: 'https://ankit-mathapati.vercel.app/',
       github: '',
     },
     {

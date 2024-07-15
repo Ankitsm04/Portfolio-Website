@@ -135,3 +135,53 @@
     transform: translateY(0);
   }
 }
+.overlay a{
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bolder;
+  background-color: #ffffff;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.menu__button {
+  min-width: 62px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 17px;
+  background-color: #efe9e9;
+  transition: background-color .4s;
+}
+
+.menu__button span {
+  color: #000;
+  line-height: 1;
+  transition: color .4s;
+}
+
+.menu__button:hover {
+  background: linear-gradient(90deg, #fff 50%, transparent 0) repeat-x,
+  linear-gradient(90deg, #fff 50%, transparent 0) repeat-x,
+  linear-gradient(0deg, #fff 50%, transparent 0) repeat-y,
+  linear-gradient(0deg, #fff 50%, transparent 0) repeat-y;
+  background-size: 6px 2px, 6px 2px, 2px 6px, 2px 6px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  animation: linearGradientMove .4s infinite linear;
+}
+
+.menu__button:hover span {
+  color: #fff;
+}
+
+@keyframes linearGradientMove {
+  100% {
+    background-position: 6px 0, -6px 100%, 0 -6px, 100% 6px;
+  }
+}

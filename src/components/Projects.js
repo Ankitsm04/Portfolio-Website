@@ -20,6 +20,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: PORTFOLIO,
       link: 'https://ankit-mathapati.azurewebsites.net/',
+      github: '',
     },
     {
       title: 'Currency Converter',
@@ -27,6 +28,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: CONVERT,
       link: 'https://currency-convert-by-ankit.netlify.app/',
+      github: '',
     },
     {
       title: 'Company Portfolio',
@@ -34,6 +36,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: DONEX,
       link: 'https://donexinfotech.azurewebsites.net/',
+      github: '',
     },
     {
       title: 'Ecommerce',
@@ -41,6 +44,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: NIKE,
       link: 'https://nikesoul.netlify.app/',
+      github: '',
     },
     {
       title: 'Amazon Clone',
@@ -48,6 +52,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: AMZN,
       link: 'https://amazon-clone-38.netlify.app/',
+      github: '',
     },
     {
       title: 'Expense Tracker',
@@ -55,6 +60,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: TRACK,
       link: 'https://expensetrackerfromankit.netlify.app/',
+      github: '',
     },
     {
       title: 'Text Formatting App',
@@ -62,6 +68,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: QTEXT,
       link: 'https://qtext-react.vercel.app/',
+      github: '',
     },
     {
       title: 'Movie Recommendation System',
@@ -69,6 +76,7 @@ const Projects = () => {
       category: 'AI/ML',
       image: MOVIE,
       link: 'https://ml-movie-recommendation-system.streamlit.app/',
+      github: '',
     },
   ];
 
@@ -112,8 +120,8 @@ const Projects = () => {
             >
               <div className='overlay'>
                 <h3>{project.title}</h3>
-                <a href={project.link} className='project-button'>
-                  View Project
+                <a href="#" class="menu__button">
+                <span>🔗View Project</span>                 
                 </a>
               </div>
             </div>

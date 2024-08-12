@@ -15,6 +15,14 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Movie Recommendation System',
+      description: 'Python',
+      category: 'AI/ML',
+      image: MOVIE,
+      link: 'https://ml-movie-recommendation-system.streamlit.app/',
+      github: '',
+    },
+    {
       title: 'Portfolio',
       description: 'HTML/CSS/JS',
       category: 'Web Dev',
@@ -36,14 +44,6 @@ const Projects = () => {
       category: 'Web Dev',
       image: DONEX,
       link: 'https://donexinfotech.azurewebsites.net/',
-      github: '',
-    },
-    {
-      title: 'Ecommerce',
-      description: 'HTML/CSS/JS',
-      category: 'Web Dev',
-      image: NIKE,
-      link: 'https://nikesoul.netlify.app/',
       github: '',
     },
     {
@@ -70,14 +70,7 @@ const Projects = () => {
       link: 'https://qtext-react.vercel.app/',
       github: '',
     },
-    {
-      title: 'Movie Recommendation System',
-      description: 'Python',
-      category: 'AI/ML',
-      image: MOVIE,
-      link: 'https://ml-movie-recommendation-system.streamlit.app/',
-      github: '',
-    },
+    
   ];
 
   const handleCategoryClick = (category) => {
@@ -120,7 +113,7 @@ const Projects = () => {
             >
               <div className='overlay'>
                 <h3>{project.title}</h3>
-                <a href="#" class="menu__button">
+                <a href={project.link} class="menu__button">
                 <span>🔗View Project</span>                 
                 </a>
               </div>

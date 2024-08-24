@@ -6,7 +6,7 @@ import TRACK from '../assets/images/projects/expensetracker.png';
 import QTEXT from '../assets/images/projects/Qtext.png';
 import MOVIE from '../assets/images/projects/movierecommedation.png';
 import PORTFOLIO from '../assets/images/projects/portfolio.png';
-import NIKE from '../assets/images/projects/nikesoul.png';
+import FINANCE from '../assets/images/projects/finance-tracker.png'
 import DONEX from '../assets/images/projects/donex.png';
 import Section from './Section';
 
@@ -39,11 +39,19 @@ const Projects = () => {
       github: '',
     },
     {
+      title: 'Finance Tracker',
+      description: 'Next.js/Redux',
+      category: 'Web Dev',
+      image: FINANCE,
+      link: 'https://finance-tracker-ankit.vercel.app/',
+      github: '',
+    },
+    {
       title: 'Company Portfolio',
       description: 'HTML/CSS/JS',
       category: 'Web Dev',
       image: DONEX,
-      link: 'https://donexinfotech.azurewebsites.net/',
+      link: 'https://donexinfotech.vercel.app/',
       github: '',
     },
     {

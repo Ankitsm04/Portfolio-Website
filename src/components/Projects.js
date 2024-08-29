@@ -9,6 +9,7 @@ import PORTFOLIO from '../assets/images/projects/portfolio.png';
 import FINANCE from '../assets/images/projects/finance-tracker.png'
 import DONEX from '../assets/images/projects/donex.png';
 import Section from './Section';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('ALL');

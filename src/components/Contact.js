@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import './Contact.css'; // Your main CSS file for Contact component
+import React, { useState, useEffect, useRef } from 'react';
+import './Contact.css';
+import Section from './Section';
 
 const Contact = () => {
   const [status, setStatus] = useState('');
+  const contactRef = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -29,8 +31,29 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className='contact' id='contact'>
+    <div className='contact' id='contact' ref={contactRef}>
       <div className='night'>
         <div className='star'></div>
         <div className='star'></div>
@@ -38,10 +61,12 @@ const Contact = () => {
         <div className='star'></div>
         <div className='star'></div>
       </div>
-      <div className='head'>
-        <p>Contact</p>
-        <div className='line'></div>
-      </div>
+      <Section id="head">
+        <div className='head'>
+          <p>Contact</p>
+          <div className='line'></div>
+        </div>
+      </Section>
       <form className='contact-form' onSubmit={onSubmit}>
         <input
           type='text'
@@ -65,7 +90,7 @@ const Contact = () => {
           required
         ></textarea>
         <button type='submit' className='ui-btn'>Submit</button>
-        </form>
+      </form>
       {status && <p>{status}</p>}
     </div>
   );

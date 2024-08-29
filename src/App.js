@@ -6,10 +6,13 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollProgress from './components/Scrollprogress';
 
 export default function Home() {
   return (
+    <>
     <div>
+      <ScrollProgress/>
       <Navbar />
       <Hero/>
       <About/>
@@ -17,5 +20,6 @@ export default function Home() {
       <Contact />
       <Footer />
     </div>
+    </>
   );
 }

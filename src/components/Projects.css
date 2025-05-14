@@ -166,3 +166,9 @@
 .menu__button:hover span {
   color: #fff;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

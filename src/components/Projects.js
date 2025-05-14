@@ -8,6 +8,8 @@ import MOVIE from '../assets/images/projects/movierecommedation.png';
 import PORTFOLIO from '../assets/images/projects/portfolio.png';
 import FINANCE from '../assets/images/projects/finance-tracker.png'
 import DONEX from '../assets/images/projects/donex.png';
+import BLOG from '../assets/images/projects/bloging.png';
+import PREPVIEW from '../assets/images/projects/ai-interview.png';
 import Section from './Section';
 import { motion } from 'framer-motion';
 
@@ -15,6 +17,21 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('ALL');
 
   const projects = [
+    {
+      title: 'AI Interview Platform',
+      description: 'Python',
+      category: 'AI/ML',
+      image: PREPVIEW,
+      link: 'https://prepview-ai.vercel.app/',
+      github: 'https://github.com/Ankitsm04/Prep_view',
+    },
+    {
+      title: 'Full Stack Blogging  Website',
+      description: 'Python',
+      category: 'AI/ML',
+      image: BLOG,
+      github: 'https://github.com/Ankitsm04/Full-stack-Blogging-App',
+    },
     {
       title: 'Movie Recommendation System',
       description: 'Python',
@@ -28,7 +45,7 @@ const Projects = () => {
       description: 'HTML/CSS/JS',
       category: 'Web Dev',
       image: PORTFOLIO,
-      link: 'https://ankit-mathapati.vercel.app/',
+      link: '',
       github: '',
     },
     {
@@ -122,9 +139,22 @@ const Projects = () => {
             >
               <div className='overlay'>
                 <h3>{project.title}</h3>
+                <div className='buttons-container'>
+                {
+                  project.link && (
                 <a href={project.link} class="menu__button">
-                <span>🔗View Project</span>                 
+                <span>Live Link</span>                 
                 </a>
+                  )
+                }
+                {
+                  project.github && (
+                <a href={project.github} class="menu__button">
+                <span>Github</span>                 
+                </a>
+                  )
+                }
+                </div>
               </div>
             </div>
           </Section>

@@ -39,15 +39,7 @@ const Projects = () => {
       category: 'AI/ML',
       image: MOVIE,
       link: 'https://ml-movie-recommendation-system.streamlit.app/',
-      github: '',
-    },
-    {
-      title: 'Portfolio',
-      description: 'HTML/CSS/JS',
-      category: 'Web Dev',
-      image: PORTFOLIO,
-      link: '',
-      github: '',
+      github: 'https://github.com/Ankitsm04/Movie-Recommendation-System',
     },
     {
       title: 'Currency Converter',
@@ -63,7 +55,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: FINANCE,
       link: 'https://finance-tracker-ankit.vercel.app/',
-      github: '',
+      github: 'https://github.com/Ankitsm04/Personal-Finance-Tracker',
     },
     {
       title: 'Company Portfolio',
@@ -79,7 +71,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: AMZN,
       link: 'https://amazon-clone-38.netlify.app/',
-      github: '',
+      github: 'https://github.com/Ankitsm04/Personal-Finance-Tracker',
     },
     {
       title: 'Expense Tracker',
@@ -87,7 +79,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: TRACK,
       link: 'https://expensetrackerfromankit.netlify.app/',
-      github: '',
+      github: 'https://github.com/Ankitsm04/Personal-Finance-Tracker',
     },
     {
       title: 'Text Formatting App',
@@ -95,7 +87,7 @@ const Projects = () => {
       category: 'Web Dev',
       image: QTEXT,
       link: 'https://qtext-react.vercel.app/',
-      github: '',
+      github: 'https://github.com/Ankitsm04/Personal-Finance-Tracker',
     },
     
   ];

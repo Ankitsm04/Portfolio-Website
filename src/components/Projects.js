@@ -30,6 +30,7 @@ const Projects = () => {
       description: 'Python',
       category: 'AI/ML',
       image: BLOG,
+      link: 'https://full-stack-blogging-app-five.vercel.app/',
       github: 'https://github.com/Ankitsm04/Full-stack-Blogging-App',
     },
     {
